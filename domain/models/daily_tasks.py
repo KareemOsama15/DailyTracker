@@ -1,10 +1,13 @@
 from dataclasses import dataclass
-from typing import Optional
+from typing import Optional, ClassVar
 from datetime import datetime
+
 
 @dataclass
 class DailyTasks:
     """DailyTasks domain model"""
+
+    __table_name__: ClassVar[str] = "daily_tasks"
 
     id: int
     user_id: int

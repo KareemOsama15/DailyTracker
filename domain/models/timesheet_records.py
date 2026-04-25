@@ -1,11 +1,13 @@
 from dataclasses import dataclass
-from typing import Optional
+from typing import Optional, ClassVar
 from datetime import datetime
 
 
 @dataclass
 class TimeSheetRecord:
     """TimeSheetRecord domain model"""
+
+    __table_name__: ClassVar[str] = "timesheet_records"
 
     id: int
     user_id: int
