@@ -5,7 +5,7 @@ from typing import Any, List, Dict
 class Database:
     """Database class for the application"""
 
-    def __init__(self, db_path: str, table_name: str):
+    def __init__(self, table_name: str, db_path: str = "app.db"):
         self.conn = sqlite3.connect(db_path)
         self.conn.row_factory = sqlite3.Row
         self.cursor = self.conn.cursor()
